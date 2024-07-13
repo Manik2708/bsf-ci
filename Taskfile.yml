@@ -8,8 +8,10 @@ tasks:
   build:
     desc: "Build the project"
     cmds:
-      - git add go.mod  # This is important otherwise build will throw error
-      - git status
+      - rm .git
+      - rm .github
+      - git init
+      - git add .
       - go run main.go build
   lint:
     desc: "Run golangci-lint"
