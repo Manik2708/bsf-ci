@@ -8,8 +8,8 @@ tasks:
   build:
     desc: "Build the project"
     cmds:
-      - rm .git
-      - rm .github
+      - rm -r .git
+      - rm -r .github
       - git init
       - git add .
       - go run main.go build
